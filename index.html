@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <div class="left-col">
+            <img src="./images/logo.png" class="logo" alt="">
+            <div class="content">
+                <h1>Add plants to your living space</h1>
+                <p>Plants are very important to the nature and also will give us some butifual space so dont miss this.
+                </p>
+                <button type="button">learn more</button>
+            </div>
+        </div>
+        <div class="right-col">
+            <div class="slider">
+                <img src="./images/pic-1.jpg" id="img" alt="pic-1">
+            </div>
+            <div class="slider-content">
+                <h2>Where can I find ideas for small rooms</h2>
+                <hr>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo alias quod, vero neque <br> dolor rem
+                    ipsum
+                    corrupti fugit esse, excepturi quo dicta explicabo commodi modi iste <br>adipisci, at ratione
+                    obcaecati.
+                </p>
+                <div class="controller">
+                    <img src="./images/back.png" id="backbtn" alt="back">
+                    <div class="virtical-line"> </div>
+                    <img src="./images/next.png" id="nextbtn" alt="next">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        var backbtn = document.getElementById("backbtn")
+        var nextbtn = document.getElementById("nextbtn")
+        var img = document.getElementById("img")
+
+        var slide_imges = new Array("./images/pic-1.jpg",
+            "./images/pic-2.jpg",
+            "./images/pic-3.jpg",
+            "./images/pic-4.jpg")
+        let i = 0;
+        nextbtn.onclick = function () {
+            if (i < 3) {
+                img.src = slide_imges[i + 1];
+                i++;
+            }
+        }
+        backbtn.onclick = function () {
+            if (i > 0) {
+                img.src = slide_imges[i - 1];
+                i--;
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>

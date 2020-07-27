@@ -1,0 +1,158 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+.wrapper{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    flex-wrap: wrap;   /*  to arrange the elements beside eachother  */
+}
+
+.left-col ,.right-col{
+    flex-basis: 50%;
+    height: 100vh;
+    position: relative;
+}
+.left-col{
+    /* background: red; */
+}
+.logo{
+    display: block;
+    width: 80px;
+    margin-top: 30px;
+    margin-left: 120px;
+}
+
+.content{
+    max-width: 500px;
+    position: absolute;
+    top: 50%;
+    left: 120px;
+    transform: translateY(-50%);
+}
+.content h1{
+    color: #05a35f;
+    font-size: 60px;
+    line-height: 70px;
+    margin: 25px 0;
+}
+
+.content p{
+    color: #777;
+    font-size: 17px;
+    line-height: 28px;
+    margin-bottom: 50px;
+}
+
+button{
+    width: 200px;
+    /* pad */
+    border: none;
+    background: #05a35f;
+    box-shadow: 0px 10px 10px 1px rgba(219, 219, 219, 0.5);
+    padding: 25px 0px;
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+    outline: none;
+    margin-bottom: 10px;
+}
+
+.slider{
+    width: 100%;
+    height: 60%;
+    display: flex;
+}
+
+.slider img{
+    width: 100%;
+}
+
+.slider-content{
+    width: 100%;
+    height: 40%;
+    background: #05a35f;
+    padding-top: 30px;
+    padding-left: 30px;
+
+}
+.slider-content h2{
+    font-size: 26px;
+    font-weight: 100;
+    color: #fff;
+
+}
+.slider-content p{
+    font-size: 18px;
+    color: #bfffdd;
+    line-height: 25px;
+    margin-bottom: 20px;
+}
+
+.slider-content hr{
+    border: none;
+    width: 270px;
+    height: 1px;
+    margin: 20px 0 30px;
+    background: #b5e3cf;
+}
+
+.controller{
+    width: 120px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+}
+
+.controller img{
+    width: 60px;
+    margin: 0px 20px 10px 10px;
+    cursor: pointer;
+    
+}
+.virtical-line{
+    /* border: none; */
+    width: 2px;
+    height: 30px;
+    background: #000503;
+}
+
+
+/* -----------Midea query for small screen devices-------------- */
+
+
+@media only screen and (max-width:800px){
+
+    .logo{
+        margin: 30px auto;
+}
+
+.left-col ,.right-col{
+    flex-basis: 100%;
+}
+.content{
+    left: 0;
+    padding: 20px;
+    text-align: center;
+}
+.content h1{
+    font-size: 34px;
+    line-height: 38px;
+}
+.slider{
+    /* width: 100%; */
+    height: auto;
+    
+}
+.slider-content{
+    height: auto;
+}
+}
+
+
+
